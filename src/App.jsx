@@ -4,12 +4,17 @@ import { motion } from "framer-motion";
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
+import SearchPage from "./components/SearchPage/SearchPage.jsx";
 
 function App() {
   return (
     <div className="App">
       {/* Header */}
-      <h1>Le Delirium</h1>
+      <h1>Wild Vibes</h1>
+
+      <div>
+        <SearchPage />
+      </div>
 
       {/* fin Header */}
 
