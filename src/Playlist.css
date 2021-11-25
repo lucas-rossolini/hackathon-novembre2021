@@ -1,0 +1,48 @@
+.titre-playlist {
+  margin: 50px auto 20px auto;
+  font-size: 20px;
+  color: white;
+}
+
+.cartes-favori {
+  display: flex;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px auto;
+  width: 80%;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 39, 124, 1) 0%,
+    rgba(113, 34, 201, 1) 100%
+  );
+}
+
+.description-favori {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-favori {
+  width: 50px;
+  border-radius: 50px;
+}
+
+.titre-favori {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.artiste-favori {
+  font-size: 10px;
+  margin: 0;
+}
+
+.coeur-favori {
+  height: 20px;
+  margin: auto 10px;
+}
