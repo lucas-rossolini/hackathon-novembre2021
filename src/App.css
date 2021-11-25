@@ -40,7 +40,7 @@
 -------------------------------------- */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: linear-gradient(0deg, rgba(19, 12, 54, 0.2), rgba(19, 12, 54, 0.2)), #1E144A;
+  background: linear-gradient(0deg, rgba(19, 12, 54, 0.2), rgba(19, 12, 54, 0.2)), #1E144A;
 }
 
 

@@ -31,7 +31,7 @@ const titles = [
   {
     name: "Juliette Armanet",
     album: "Brûler le feu",
-    title: "Le Dernier Jour du Disco",
+    title: "Le Dernier Jour",
     year: "2021",
     genre: "Pop",
     image: Juliette,

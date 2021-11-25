@@ -1,17 +1,21 @@
 import React from "react";
 import "./Playlist.css";
 import titles from "./Data/data";
+import Coeur from "./Images/heart.png";
 
-function Favori() {
+function Playlist() {
   return (
     <div>
       <p className="titre-playlist">Playlist</p>
       {titles.map((title) => (
-        <div className="cartes-favori" style={{ backgroundColor: title.color }}>
-          <img className="image-favori" src={title.image} alt="" />
-          <div className="description-favori">
-            <p className="titre-favori">{title.title}</p>
-            <p className="artiste-favori">{title.name}</p>
+        <div className="favori-global">
+          <div className="cartes-favori">
+            <img className="coeur-favori" src={Coeur} alt="coeur" />
+            <img className="image-favori" src={title.image} alt="" />
+            <div className="description-favori">
+              <p className="titre-favori">{title.title}</p>
+              <p className="artiste-favori">{title.name}</p>
+            </div>
           </div>
         </div>
       ))}
@@ -19,4 +23,4 @@ function Favori() {
   );
 }
 
-export default Favori;
+export default Playlist;

@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
-import Favori from "./Playlist.jsx";
+import Playlist from "./Playlist.jsx";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
 
       {/* fin Header */}
       <BrowserRouter>
-        <Favori />
         <Routes>
           <Route path="/" element={Header} />
           <Route path="page/" element={Footer} />
@@ -21,7 +19,7 @@ function App() {
       </BrowserRouter>
 
       {/* Contenu */}
-
+      <Playlist />
       {/* Fin Contenu */}
 
       {/* Footer */}

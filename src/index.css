@@ -32,7 +32,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Poppins', sans-serif;
-  background-color: linear-gradient(0deg, rgba(19, 12, 54, 0.2), rgba(19, 12, 54, 0.2)), #1E144A;
 }
 
 code {
