@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
+import Favori from "./components/Playlist/Playlist.jsx";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <h1>Le Delirium</h1>
 
       {/* fin Header */}
-
+      <Favori />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={Header} />
