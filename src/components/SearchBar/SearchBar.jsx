@@ -11,7 +11,7 @@ function SearchBar({ filtervalue, onChangefilter }) {
               value={filtervalue}
               onChange={onChangefilter}
               className="inputfilter"
-              placeholder="Filter"
+              placeholder="Type here..."
             />
           </div>
         </div>

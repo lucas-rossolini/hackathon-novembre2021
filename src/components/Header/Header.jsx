@@ -34,6 +34,11 @@ function Header() {
               </Link>
             </li>
             <li>
+              <Link to="/search" className="a" onClick={handleIsChecked}>
+                Search
+              </Link>
+            </li>
+            <li>
               <Link to="/favorites" className="a" onClick={handleIsChecked}>
                 Favorites
               </Link>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import "./SearchPage.css";
 import titles from "../../Data/data";
-import Coeur from "../../Images/emptyheart.png";
+import Coeur from "../../assets/images/emptyheart.png";
 
 function SearchPage() {
   const [filtervalue, setFiltervalue] = useState("");
