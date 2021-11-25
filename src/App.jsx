@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
+import SearchPage from "./components/SearchPage/SearchPage.jsx";
 import Player from "./components/Player/Player.jsx";
 import Playlist from "./Playlist.jsx";
 
@@ -24,6 +25,9 @@ function App() {
       </BrowserRouter>
 
       {/* Contenu */}
+      <div>
+        <SearchPage />
+      </div>
       <Player />
       <Playlist />
       {/* Fin Contenu */}
