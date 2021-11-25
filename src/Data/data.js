@@ -1,3 +1,6 @@
+import adele from "../assets/music/adele-easy-on-me.mp3";
+import Song2 from "../assets/music/on-n-on.mp3";
+
 import Adele from "../Images/adele.jpeg";
 import Iamdaylight from "../Images/iamdaylight.jpeg";
 import Imagine from "../Images/imagine.jpeg";
@@ -18,6 +21,7 @@ const titles = [
     genre: "Pop",
     image: Adele,
     color: "#19CFFC",
+    src: adele,
   },
   {
     name: "Nolwenn Leroy",
@@ -27,6 +31,7 @@ const titles = [
     genre: "Pop",
     image: Nolwenn,
     color: "#FFE694",
+    src: Song2,
   },
   {
     name: "Juliette Armanet",

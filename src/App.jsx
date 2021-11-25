@@ -2,9 +2,13 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
+import Player from "./components/Player/Player.jsx";
+import Favori from "./components/Playlist/Playlist.jsx";
 import Playlist from "./Playlist.jsx";
 
 function App() {
@@ -12,7 +16,6 @@ function App() {
     <div className="App">
       {/* Header */}
       <Header />
-
       {/* fin Header */}
       <BrowserRouter>
         <Routes>
@@ -22,6 +25,7 @@ function App() {
       </BrowserRouter>
 
       {/* Contenu */}
+      <Player />
       <Playlist />
       {/* Fin Contenu */}
 
