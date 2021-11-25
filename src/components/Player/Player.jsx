@@ -5,7 +5,7 @@ import titles from "../../Data/data";
 import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 
 import "./Player.css";
-import Visualizer from "../Visualizer.jsx";
+import Visualizer from "../Visualizer/Visualizer.jsx";
 
 function Player() {
   const [songs] = useState(titles);
