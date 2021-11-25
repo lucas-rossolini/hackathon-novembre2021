@@ -5,6 +5,7 @@ import titles from "../../Data/data";
 import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 
 import "./Player.css";
+import Visualizer from "../Visualizer.jsx";
 
 function Player() {
   const [songs] = useState(titles);
@@ -39,8 +40,6 @@ function Player() {
     }
   });
 
-  console.log(songs[currentSongIndex].src);
-
   const SkipSong = (forwards = true) => {
     if (forwards) {
       setCurrentSongIndex(() => {
@@ -66,7 +65,6 @@ function Player() {
       });
     }
   };
-  console.log(currentSongIndex);
 
   //   ref={audioEl}
   return (
@@ -75,13 +73,18 @@ function Player() {
       <h4>Playing now</h4>
       <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
       <Details song={songs[currentSongIndex]} />
+      {isPlaying && <Visualizer song={songs[currentSongIndex]} ref={audioEl} />}
+      <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
+
       <Controls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         SkipSong={SkipSong}
+        currentSongIndex={currentSongIndex}
+        data={titles}
       />
       <p>
-        Next up:
+        Next up :{" "}
         <span>
           {songs[nextSongIndex].title} by {songs[nextSongIndex].name}
         </span>

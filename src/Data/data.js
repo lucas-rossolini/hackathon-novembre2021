@@ -1,69 +1,13 @@
-import adele from "../assets/music/adele-easy-on-me.mp3";
-import Song2 from "../assets/music/on-n-on.mp3";
-import Song3 from "../assets/music/somebody-new.mp3";
-
-import Adele from "../assets/images/adele.jpeg";
-import Iamdaylight from "../assets/images/iamdaylight.jpeg";
-import Imagine from "../assets/images/imagine.jpeg";
-import Nolwenn from "../assets/images/nolwenn.jpeg";
-import Juliette from "../assets/images/juliette.jpeg";
-import Michael from "../assets/images/manila.jpeg";
-import Metroplex from "../assets/images/metroplex.jpg";
+import AventurierZik from "../assets/music/aventurier.mp3";
+import museZik from "../assets/music/muse.mp3";
+import wewill from "../assets/music/wewill.mp3";
+import smooth from "../assets/music/smooth.mp3";
+import Bad from "../assets/images/Bad.png";
+import aventurier from "../assets/images/aventurier.jpeg";
 import Queen from "../assets/images/queen.jpeg";
-import Stromae from "../assets/images/stromae.jpeg";
-import Swedish from "../assets/images/swedish.jpeg";
+import Muse from "../assets/images/muse.jpeg";
 
 const titles = [
-  {
-    name: "Adele",
-    album: "30",
-    title: "Easy on me",
-    year: "2021",
-    genre: "Pop",
-    image: Adele,
-    color: "#19CFFC",
-    src: adele,
-  },
-  {
-    name: "Nolwenn Leroy",
-    album: "La Cavale",
-    title: "Brésil, Finistère",
-    year: "2021",
-    genre: "Pop",
-    image: Nolwenn,
-    color: "#FFE694",
-    src: Song2,
-  },
-  {
-    name: "Juliette Armanet",
-    album: "Brûler le feu",
-    title: "Le Dernier Jour",
-    year: "2021",
-    genre: "Pop",
-    image: Juliette,
-    color: "#098DFE",
-    src: Song3,
-  },
-  {
-    name: "Metroplex",
-    album: "Streetwise",
-    title: "The Day After",
-    year: "2016",
-    genre: "Ambient",
-    image: Metroplex,
-    color: "#9545DD",
-    src: Song2,
-  },
-  {
-    name: "Stromae",
-    album: "Santé",
-    title: "Santé",
-    year: "2021",
-    genre: "Pop",
-    image: Stromae,
-    color: "#83D841",
-    src: Song3,
-  },
   {
     name: "Queen",
     album: "News of the World",
@@ -72,48 +16,173 @@ const titles = [
     genre: "Rock",
     image: Queen,
     color: "#19CFFC",
-    src: Song2,
-  },
-  {
-    name: "IamDayLight",
-    album: "Orion",
-    title: "Blue",
-    year: "2020",
-    genre: "Rock",
-    image: Iamdaylight,
-    color: "#FFE694",
-    src: Song3,
-  },
-  {
-    name: "Imagine Dragons",
-    album: "Mercury – Act 1",
-    title: "Wrecked",
-    year: "2021",
-    genre: "Alternative",
-    image: Imagine,
-    color: "#098DFE",
-    src: Song2,
-  },
-  {
-    name: "Swedish House Mafia",
-    album: "Moth To A Flame",
-    title: "Moth To A Flame",
-    year: "2021",
-    genre: "Electro",
-    image: Swedish,
-    color: "#9545DD",
-    src: Song3,
+    src: wewill,
+    vibrate: [
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+      [150, 200, 150, 200, 150, 650],
+    ],
   },
   {
     name: "Michael Jackson",
-    album: "Manila 1996",
-    title: "Smooth criminal",
-    year: "1996",
+    album: "Bad",
+    title: "Smooth Criminal",
+    year: "1988",
     genre: "Pop",
-    image: Michael,
-    color: "#83D841",
-    src: Song2,
+    image: Bad,
+    color: "#19CFFC",
+    src: smooth,
+    vibrate: [
+      [0, 300, 100, 50, 100, 50, 100, 50, 100, 50],
+      [100, 50, 100, 50, 150, 150, 150, 450, 100, 50],
+      [100, 50, 150, 150, 150, 450, 100, 50, 100, 50],
+      [150, 150, 150, 450, 150, 150, 0, 300, 100, 50],
+      [100, 50, 100, 50, 100, 50, 100, 50, 100, 50],
+      [150, 150, 150, 450, 100, 50, 100, 50, 150, 150],
+      [150, 450, 100, 50, 100, 50, 150, 150, 150, 450],
+      [150, 150, 0, 300, 100, 50, 100, 50, 100, 50],
+      [100, 50, 100, 50, 100, 50, 150, 150, 150, 450],
+      [100, 50, 100, 50, 150, 150, 150, 450, 100, 50],
+      [100, 50, 150, 150, 150, 450, 150, 150, 0, 300],
+      [100, 50, 100, 50, 100, 50, 100, 50, 100, 50],
+      [100, 50, 150, 150, 150, 450, 100, 50, 100, 50],
+      [150, 150, 150, 450, 100, 50, 100, 50, 150, 150],
+      [150, 450, 150, 150, 0, 0, 0, 0, 0, 0],
+    ],
+  },
+  {
+    name: "Indochine",
+    album: "L'aventurier",
+    title: "L'aventurier",
+    year: "1982",
+    genre: "Pop",
+    image: aventurier,
+    color: "#FFE694",
+    src: AventurierZik,
+    vibrate: [
+      [
+        100, 250, 100, 90, 150, 80, 100, 200, 100, 150, 120, 80, 150, 250, 400,
+        600,
+      ],
+      [
+        100, 250, 100, 90, 150, 80, 100, 200, 100, 150, 150, 80, 150, 70, 150,
+        70, 150, 700,
+      ],
+      [
+        100, 250, 100, 90, 150, 80, 100, 200, 100, 150, 120, 80, 150, 250, 400,
+        600,
+      ],
+      [
+        100, 250, 100, 90, 150, 80, 100, 200, 100, 150, 150, 80, 150, 70, 150,
+        70, 150, 700,
+      ],
+      [
+        100, 250, 100, 90, 150, 80, 100, 200, 100, 150, 120, 80, 150, 250, 400,
+        600,
+      ],
+      [
+        100, 250, 100, 90, 150, 80, 100, 200, 100, 150, 150, 80, 150, 70, 150,
+        70, 150, 700,
+      ],
+    ],
+  },
+  {
+    name: "Muse",
+    album: "The 2nd Law",
+    title: "Madness",
+    year: "2012",
+    genre: "Pop",
+    image: Muse,
+    color: "#098DFE",
+    src: museZik,
+    vibrate: [
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 320, 160, 320, 160],
+      [320, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 320, 160, 320],
+      [160, 320, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 320, 160],
+      [320, 160, 320, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 320],
+      [160, 320, 160, 320, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [320, 160, 320, 160, 320, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 320, 160, 320, 160, 320, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 320, 160, 320, 160, 320, 80, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 320, 160, 320, 160, 320, 80, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 320, 160, 320, 160, 320, 80],
+      [80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+      [80, 80, 80, 80, 80, 320, 160, 320, 160, 320],
+    ],
   },
 ];
+
+const playlist = {
+  simpsons: [
+    166, 320, 128, 257, 103, 249, 71, 145, 138, 366, 119, 273, 120, 248, 79,
+    121, 71, 121, 63, 113, 63, 129, 263, 665, 103, 112, 64, 113, 63, 105, 63,
+    129, 119, 521, 71, 129, 63, 120, 56, 149, 107,
+  ],
+
+  ghostBusters: [
+    592, 184, 632, 144, 584, 169, 534, 282, 96, 159, 95, 161, 104, 24, 88, 40,
+    120, 152, 592, 184, 632, 144, 584, 169, 534, 282, 96, 159, 95, 161, 104, 24,
+    88, 40, 120, 152,
+  ],
+
+  mario: [87, 89, 104, 176, 96, 176, 88, 88, 79, 241, 176, 377, 191],
+
+  powerRangers: [150, 150, 150, 150, 75, 75, 150, 150, 150, 150, 450],
+
+  mortalKombat: [
+    100, 200, 100, 200, 100, 200, 100, 200, 100, 100, 100, 100, 100, 200, 100,
+    200, 100, 200, 100, 200, 100, 100, 100, 100, 100, 200, 100, 200, 100, 200,
+    100, 200, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 50, 50, 100,
+    800,
+  ],
+
+  jamesbond: [
+    200, 100, 200, 275, 425, 100, 200, 100, 200, 275, 425, 100, 75, 25, 75, 125,
+    75, 25, 75, 125, 100, 100,
+  ],
+
+  starwars: [
+    500, 110, 500, 110, 450, 110, 200, 110, 170, 40, 450, 110, 200, 110, 170,
+    40, 500,
+  ],
+
+  morsecode: [
+    100, 30, 100, 30, 100, 200, 200, 30, 200, 30, 200, 200, 100, 30, 100, 30,
+    100,
+  ],
+
+  gameOfThrones: [
+    950, 50, 530, 80, 100, 100, 100, 60, 930, 50, 530, 80, 100, 100, 100, 60,
+    980,
+  ],
+
+  survivor: [
+    700, 150, 150, 150, 150, 150, 150, 1000, 150, 150, 150, 150, 150, 700, 150,
+    150, 150, 150, 150, 0, 2000,
+  ],
+};
 
 export default titles;
