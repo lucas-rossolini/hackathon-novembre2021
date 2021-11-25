@@ -13,7 +13,10 @@ function SearchPage() {
   };
 
   return (
-    <div>
+    <div className="searchBar">
+      <div>
+        <h2>Search</h2>
+      </div>
       <div>
         <SearchBar filtervalue={filtervalue} onChangefilter={onChangefilter} />
       </div>
