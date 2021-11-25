@@ -1,3 +1,14 @@
+import Adele from "../Images/adele.jpeg";
+import Iamdaylight from "../Images/iamdaylight.jpeg";
+import Imagine from "../Images/imagine.jpeg";
+import Nolwenn from "../Images/nolwenn.jpeg";
+import Juliette from "../Images/juliette.jpeg";
+import Kidlaroi from "../Images/kidlaroi.jpg";
+import Metroplex from "../Images/metroplex.jpg";
+import Queen from "../Images/queen.jpeg";
+import Stromae from "../Images/stromae.jpeg";
+import Swedish from "../Images/swedish.jpeg";
+
 const titles = [
   {
     name: "Adele",
@@ -5,6 +16,8 @@ const titles = [
     title: "Easy on me",
     year: "2021",
     genre: "Pop",
+    image: Adele,
+    color: "#19CFFC",
   },
   {
     name: "Nolwenn Leroy",
@@ -12,6 +25,8 @@ const titles = [
     title: "Brésil, Finistère",
     year: "2021",
     genre: "Pop",
+    image: Nolwenn,
+    color: "#FFE694",
   },
   {
     name: "Juliette Armanet",
@@ -19,6 +34,8 @@ const titles = [
     title: "Le Dernier Jour du Disco",
     year: "2021",
     genre: "Pop",
+    image: Juliette,
+    color: "#098DFE",
   },
   {
     name: "Metroplex",
@@ -26,6 +43,8 @@ const titles = [
     title: "The Day After",
     year: "2016",
     genre: "Ambient",
+    image: Metroplex,
+    color: "#9545DD",
   },
   {
     name: "Stromae",
@@ -33,6 +52,8 @@ const titles = [
     title: "Santé",
     year: "2021",
     genre: "Pop",
+    image: Stromae,
+    color: "#83D841",
   },
   {
     name: "Queen",
@@ -40,6 +61,8 @@ const titles = [
     title: "We Will Rock You",
     year: "1977",
     genre: "Rock",
+    image: Queen,
+    color: "#19CFFC",
   },
   {
     name: "IamDayLight",
@@ -47,6 +70,8 @@ const titles = [
     title: "Blue",
     year: "2020",
     genre: "Rock",
+    image: Iamdaylight,
+    color: "#FFE694",
   },
   {
     name: "Imagine Dragons",
@@ -54,6 +79,8 @@ const titles = [
     title: "Wrecked",
     year: "2021",
     genre: "Alternative",
+    image: Imagine,
+    color: "#098DFE",
   },
   {
     name: "Swedish House Mafia",
@@ -61,6 +88,8 @@ const titles = [
     title: "Moth To A Flame",
     year: "2021",
     genre: "Electro",
+    image: Swedish,
+    color: "#9545DD",
   },
   {
     name: "The Kid Laroi",
@@ -68,6 +97,8 @@ const titles = [
     title: "Stay",
     year: "2020",
     genre: "Rap",
+    image: Kidlaroi,
+    color: "#83D841",
   },
 ];
 

@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Roboto&display=swap');
-
-body {
-font-family: 'Poppins', sans-serif;
+.titre-playlist {
+  margin: 50px auto 20px auto;
+  font-size: 20px;
 }
 
 .cartes-favori {
   display: flex;
-  border: 1px solid black;
+  border-radius: 5px;
   padding: 5px;
   margin: 10px auto;
   width: 80%;
@@ -15,18 +14,18 @@ font-family: 'Poppins', sans-serif;
 .description-favori {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  margin-left: 20px;
   justify-content: center;
   align-items: flex-start;
 }
 
 .image-favori {
-  width: 80px;
+  width: 50px;
   border-radius: 50px;
 }
 
 .titre-favori {
-font-size: 15px;
+font-size: 12px;
 font-weight: bold;
 margin: 0;
 }
