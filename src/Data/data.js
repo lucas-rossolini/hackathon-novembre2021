@@ -1,16 +1,17 @@
 import adele from "../assets/music/adele-easy-on-me.mp3";
 import Song2 from "../assets/music/on-n-on.mp3";
+import Song3 from "../assets/music/somebody-new.mp3";
 
-import Adele from "../Images/adele.jpeg";
-import Iamdaylight from "../Images/iamdaylight.jpeg";
-import Imagine from "../Images/imagine.jpeg";
-import Nolwenn from "../Images/nolwenn.jpeg";
-import Juliette from "../Images/juliette.jpeg";
-import Kidlaroi from "../Images/kidlaroi.jpg";
-import Metroplex from "../Images/metroplex.jpg";
-import Queen from "../Images/queen.jpeg";
-import Stromae from "../Images/stromae.jpeg";
-import Swedish from "../Images/swedish.jpeg";
+import Adele from "../assets/images/adele.jpeg";
+import Iamdaylight from "../assets/images/iamdaylight.jpeg";
+import Imagine from "../assets/images/imagine.jpeg";
+import Nolwenn from "../assets/images/nolwenn.jpeg";
+import Juliette from "../assets/images/juliette.jpeg";
+import Michael from "../assets/images/manila.jpeg";
+import Metroplex from "../assets/images/metroplex.jpg";
+import Queen from "../assets/images/queen.jpeg";
+import Stromae from "../assets/images/stromae.jpeg";
+import Swedish from "../assets/images/swedish.jpeg";
 
 const titles = [
   {
@@ -41,6 +42,7 @@ const titles = [
     genre: "Pop",
     image: Juliette,
     color: "#098DFE",
+    src: Song3,
   },
   {
     name: "Metroplex",
@@ -50,6 +52,7 @@ const titles = [
     genre: "Ambient",
     image: Metroplex,
     color: "#9545DD",
+    src: Song2,
   },
   {
     name: "Stromae",
@@ -59,6 +62,7 @@ const titles = [
     genre: "Pop",
     image: Stromae,
     color: "#83D841",
+    src: Song3,
   },
   {
     name: "Queen",
@@ -68,6 +72,7 @@ const titles = [
     genre: "Rock",
     image: Queen,
     color: "#19CFFC",
+    src: Song2,
   },
   {
     name: "IamDayLight",
@@ -77,6 +82,7 @@ const titles = [
     genre: "Rock",
     image: Iamdaylight,
     color: "#FFE694",
+    src: Song3,
   },
   {
     name: "Imagine Dragons",
@@ -86,6 +92,7 @@ const titles = [
     genre: "Alternative",
     image: Imagine,
     color: "#098DFE",
+    src: Song2,
   },
   {
     name: "Swedish House Mafia",
@@ -95,15 +102,17 @@ const titles = [
     genre: "Electro",
     image: Swedish,
     color: "#9545DD",
+    src: Song3,
   },
   {
-    name: "The Kid Laroi",
-    album: "Fuck Love",
-    title: "Stay",
-    year: "2020",
-    genre: "Rap",
-    image: Kidlaroi,
+    name: "Michael Jackson",
+    album: "Manila 1996",
+    title: "Smooth criminal",
+    year: "1996",
+    genre: "Pop",
+    image: Michael,
     color: "#83D841",
+    src: Song2,
   },
 ];
 
