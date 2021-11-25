@@ -65,7 +65,7 @@ function Player() {
   return (
     <div className="c-player">
       <audio src={songs[currentSongIndex].src} ref={audioEl}></audio>
-      <Visualizer song={songs[currentSongIndex]} ref={audioEl} />
+      {isPlaying && <Visualizer song={songs[currentSongIndex]} ref={audioEl} />}
       <h4>Playing now</h4>
       <Details song={songs[currentSongIndex]} />
       <Controls
