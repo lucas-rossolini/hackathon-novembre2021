@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import titles from "../../Data/data";
+import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 
 import "./Player.css";
 import Visualizer from "../Visualizer.jsx";
@@ -14,6 +15,13 @@ function Player() {
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
+  const [deaf, setDeaf] = useState(false);
+
+  const triggerToggle = () => {
+    setDeaf(!deaf);
+  };
+
+  console.log(deaf);
 
   useEffect(() => {
     setNextSongIndex(() => {
@@ -62,8 +70,12 @@ function Player() {
   return (
     <div className="c-player">
       <audio src={songs[currentSongIndex].src} ref={audioEl}></audio>
+      <h4>Playing now</h4>
+      <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
+      <Details song={songs[currentSongIndex]} />
       {isPlaying && <Visualizer song={songs[currentSongIndex]} ref={audioEl} />}
       <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
+
       <Controls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
