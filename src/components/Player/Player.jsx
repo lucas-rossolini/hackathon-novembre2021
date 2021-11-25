@@ -2,36 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import song1 from "../../assets/images/song-1.jpg";
+import titles from "../../Data/data";
 
 import "./Player.css";
 
 function Player() {
-  const [songs] = useState([
-    {
-      title: "Forget me too ft. Halsey",
-      artist: "Machine Gun Kelly",
-      img_src: "./images/song1.jpg",
-      src: "./assets/music/on-n-on.mp3",
-    },
-    {
-      title: "Song 2",
-      artist: "Artist 2",
-      img_src: "./images/song-2.jpg",
-      src: "./music/somebody-new.mp3",
-    },
-    {
-      title: "Song 3",
-      artist: "Artist 3",
-      img_src: "./images/song-3.jpg",
-      src: "./music/on-n-on.mp3",
-    },
-    {
-      title: "Song 4",
-      artist: "Artist 4",
-      img_src: "./images/song-4.jpg",
-      src: "./music/somebody-new.mp3",
-    },
-  ]);
+  const [songs] = useState(titles);
 
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -55,6 +31,8 @@ function Player() {
       audioEl.current.pause();
     }
   });
+
+  console.log(songs[currentSongIndex].src);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -81,7 +59,9 @@ function Player() {
       });
     }
   };
+  console.log(currentSongIndex);
 
+  //   ref={audioEl}
   return (
     <div className="c-player">
       <audio src={songs[currentSongIndex].src} ref={audioEl}></audio>
@@ -93,9 +73,9 @@ function Player() {
         SkipSong={SkipSong}
       />
       <p>
-        Next up:{" "}
+        Next up:
         <span>
-          {songs[nextSongIndex].title} by {songs[nextSongIndex].artist}
+          {songs[nextSongIndex].title} by {songs[nextSongIndex].name}
         </span>
       </p>
     </div>
