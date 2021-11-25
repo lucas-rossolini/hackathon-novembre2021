@@ -10,7 +10,6 @@ import Header from "./components/Header/Header.jsx";
 import SearchPage from "./components/SearchPage/SearchPage.jsx";
 import Player from "./components/Player/Player.jsx";
 import Playlist from "./Playlist.jsx";
-import Vibrate from "./components/Vibrate/Vibrate.jsx";
 
 function App() {
   return (
@@ -25,16 +24,8 @@ function App() {
           <Route path="favorites" element={<Playlist />} />
         </Routes>
       </BrowserRouter>
-
       {/* Contenu */}
-      <div>
-        <SearchPage />
-      </div>
-      <Player />
-      <Playlist />
-      <Vibrate />
       {/* Fin Contenu */}
-
       {/* Footer */}
 
       {/* Footer */}

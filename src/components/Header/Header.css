@@ -84,7 +84,7 @@ input:checked + #label-burger span:last-child {
   -webkit-background: rgba(74, 173, 235, 0.5);
   -webkit-backdrop-filter: blur(50px);
   -moz-background: rgba(74, 173, 235, 0.5);
-  -moz-backdrop-filter: blur(50px);
+  -moz-backdrop-filter: blur(75px);
   z-index: 900;
   transition: 0.5s;
   transition-delay: 0.5s;
