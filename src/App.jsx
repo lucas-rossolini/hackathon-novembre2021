@@ -1,19 +1,16 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
-import Favori from "./components/Playlist/Playlist.jsx";
+import Playlist from "./Playlist.jsx";
 
 function App() {
   return (
     <div className="App">
       {/* Header */}
-      <h1>Le Delirium</h1>
 
       {/* fin Header */}
-      <Favori />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={Header} />
@@ -22,7 +19,7 @@ function App() {
       </BrowserRouter>
 
       {/* Contenu */}
-
+      <Playlist />
       {/* Fin Contenu */}
 
       {/* Footer */}
