@@ -1,13 +1,7 @@
-body{
-  background-color: #4d4855;
-  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-  }
-
-
 .titre-playlist {
   margin: 50px auto 20px auto;
   font-size: 20px;
-  color: white;
+  color: 	white;
 }
 
 .cartes-favori {
@@ -17,7 +11,10 @@ body{
   margin: 10px auto;
   width: 80%;
   align-items: center;
-  background: black;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+
+
 }
 
 .description-favori {
@@ -26,6 +23,7 @@ body{
   margin-left: 20px;
   justify-content: center;
   align-items: flex-start;
+  color: black;
 }
 
 .image-favori {

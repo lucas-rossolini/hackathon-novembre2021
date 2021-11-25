@@ -1,39 +1,37 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import "./SearchPage.css";
-import data from "../../Data/data";
+import titles from "../../Data/data";
+import Coeur from "../../Images/emptyheart.png";
 
 function SearchPage() {
   const [filtervalue, setFiltervalue] = useState("");
-  // Fonction pour filtrer les cartes des personnages grace à la search bar
+
   const onChangefilter = (event) => {
     const newvalue = event.target.value;
     setFiltervalue(newvalue);
   };
+
   return (
     <div>
       <div>
         <SearchBar filtervalue={filtervalue} onChangefilter={onChangefilter} />
       </div>
-
       <div>
-        <div class="mx-auto">
-          <button class="btn col-5 m-2 btncolor" type="button">
-            Rap
-          </button>
-          <button class="btn col-5 m-2 btncolor" type="button">
-            Rock
-          </button>
-          <button class="btn col-5 m-2 btncolor" type="button">
-            Pop
-          </button>
-          <button class="btn col-5 m-2 btncolor" type="button">
-            Alternative
-          </button>
-        </div>
-      </div>
-      <div>
-        
+        {titles
+          .filter((title) => title.title.toLowerCase().includes(filtervalue))
+          .map((title) => (
+            <div className="favori-global">
+              <div className="cartes-favori">
+                <img className="coeur-favori" src={Coeur} alt="coeur" />
+                <img className="image-favori" src={title.image} alt="" />
+                <div className="description-favori">
+                  <p className="titre-favori">{title.title}</p>
+                  <p className="artiste-favori">{title.name}</p>
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );
