@@ -2,18 +2,20 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+
 import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import SearchPage from "./components/SearchPage/SearchPage.jsx";
+import Player from "./components/Player/Player.jsx";
 import Playlist from "./Playlist.jsx";
 
 function App() {
   return (
     <div className="App">
       {/* Header */}
-      <h1>Wild Vibes</h1>
-
+      <Header />
       {/* fin Header */}
       <BrowserRouter>
         <Routes>
@@ -26,9 +28,8 @@ function App() {
       <div>
         <SearchPage />
       </div>
-      {/* <div>
-        <Playlist />
-      </div> */}
+      <Player />
+      <Playlist />
       {/* Fin Contenu */}
 
       {/* Footer */}
