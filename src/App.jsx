@@ -6,6 +6,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import Playlist from "./Playlist.jsx";
+import Vibrate from "./components/Vibrate/Vibrate.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
       {/* Contenu */}
       <Playlist />
+      <Vibrate />
       {/* Fin Contenu */}
 
       {/* Footer */}
