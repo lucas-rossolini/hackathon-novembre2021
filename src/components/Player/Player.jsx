@@ -70,6 +70,8 @@ function Player() {
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         SkipSong={SkipSong}
+        currentSongIndex={currentSongIndex}
+        data={titles}
       />
       <p>
         Next up:

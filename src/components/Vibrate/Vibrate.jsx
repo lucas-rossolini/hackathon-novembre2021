@@ -26,7 +26,7 @@ function Vibrate() {
 
   return (
     <div>
-      <button type="button" onClick={() => vibrate(wewill)}>
+      <button type="button" onClick={() => vibrate(aventurier)}>
         Vibrate
       </button>
     </div>
