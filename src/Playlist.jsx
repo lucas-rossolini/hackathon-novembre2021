@@ -1,7 +1,7 @@
 import React from "react";
 import "./Playlist.css";
 import titles from "./Data/data";
-import Coeur from "./Images/heart.png";
+import Coeur from "./assets/images/heart.png";
 
 function Playlist() {
   return (
