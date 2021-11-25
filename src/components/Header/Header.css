@@ -9,35 +9,151 @@
 /* --------------------------------------
               Fin CSS Mathieu
 -------------------------------------- */
+#burger {
+  display: none;
+}
 
+#label-burger {
+  position: fixed;
+  top: -1.2rem;
+  right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  z-index: 999;
+  /* background-color: #FFF; */
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#label-burger span {
+  position: absolute;
+  width: 3rem;
+  height: 3px;
+  top: 1rem;
+  margin-top: 2rem;
+  left: 1.5rem;
+  display: block;
+  background-color: white;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+#label-burger span:first-child {
+  top: 0;
+}
+
+#label-burger span:last-child {
+  top: 2rem;
+}
+
+#label-burger:hover {
+  cursor: pointer;
+}
+
+input:checked + #label-burger span {
+  opacity: 0;
+  top: 1rem;
+}
+
+input:checked + #label-burger span:first-child {
+  opacity: 1;
+  /* background-color: white; */
+  transform: rotate(405deg);
+}
+
+input:checked + #label-burger span:last-child {
+  opacity: 1;
+  /* background-color: white; */
+  transform: rotate(-405deg);
+}
+
+.white {
+  background-color: white !important;
+}
+
+#nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: rgba(74, 173, 235, 0.5);
+  backdrop-filter: blur(50px);
+  -webkit-background: rgba(74, 173, 235, 0.5);
+  -webkit-backdrop-filter: blur(50px);
+  -moz-background: rgba(74, 173, 235, 0.5);
+  -moz-backdrop-filter: blur(50px);
+  z-index: 900;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  overflow: hidden;
+}
+
+#nav-header ul {
+  text-align: right;
+  position: absolute;
+  top: 10rem;
+  right: 5rem;
+  list-style-type: none;
+  color: white;
+}
+
+#nav-header ul li {
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  display: block;
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+
+input:checked ~ #nav-header {
+  height: 100%;
+  transition-delay: 0s;
+}
+
+input:checked ~ #nav-header ul li {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
 
 /* --------------------------------------
               CSS Yohan
 -------------------------------------- */
-.navbar-light .navbar-brand {
+/* .navbar-light .navbar-brand {
   color: white;
 }
-.navbar{
-  background-color: blueviolet;
-}
+
 .navbar-toggler-icon{
-  color: cyan ;
+  color: white ;
 }
 .navbar-light .navbar-toggler {
-  color: cyan;
-  border-color: cyan;
+  color: white;
+  border-color: white;
 }
 .navbar-light .navbar-toggler-icon {
-  color: cyan;
-  border-color: cyan;
+  color: white;
+  border-color: white;
 }
 .offcanvas-header,.offcanvas-body {
-  background-color: blueviolet;
+  background-color: #423E49;
 }
 .nav-link {
   color: white;
   
-}
+} */
 /* --------------------------------------
               Fin CSS Yohan
 -------------------------------------- */
