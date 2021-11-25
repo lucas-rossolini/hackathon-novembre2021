@@ -8,7 +8,6 @@ import "./App.css";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import Player from "./components/Player/Player.jsx";
-import Favori from "./components/Playlist/Playlist.jsx";
 import Playlist from "./Playlist.jsx";
 
 function App() {
