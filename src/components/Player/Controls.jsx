@@ -28,7 +28,13 @@ function Controls(props) {
       <button className="skip-btn" onClick={() => props.SkipSong(false)}>
         <FontAwesomeIcon icon={faBackward} />
       </button>
-      <div onClick={() => vibrate(props.data[props.currentSongIndex].vibrate)}>
+      <div
+        onClick={() =>
+          setTimeout(() => {
+            vibrate(props.data[props.currentSongIndex].vibrate);
+          }, 190)
+        }
+      >
         <button
           className="play-btn"
           onClick={() => props.setIsPlaying(!props.isPlaying)}
