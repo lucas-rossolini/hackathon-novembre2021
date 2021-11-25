@@ -1,12 +1,13 @@
 import React from "react";
 import AudioSpectrum from "react-audio-spectrum";
 import { Button } from "react-bootstrap";
-import Music from "../Data/Music.mp3";
+// import Music from "../Data/Music.mp3";
 
-export default function Visualizer() {
+export default function Visualizer({ song, ref }) {
+  console.log(song.src);
   return (
     <div>
-      <audio id="audio-element" src={Music} autoPlay></audio>
+      <audio id="audio-element" src={song.src} ref={ref}></audio>
       <AudioSpectrum
         id="audio-canvas"
         height={200}

@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import Player from "./components/Player/Player.jsx";
 import Playlist from "./Playlist.jsx";
-import Visualizer from "./components/Visualizer.jsx";
+// import Visualizer from "./components/Visualizer.jsx";
 
 function App() {
   return (
@@ -23,7 +23,6 @@ function App() {
       </BrowserRouter>
 
       {/* Contenu */}
-      <Visualizer />
       <Player />
       <Playlist />
       {/* Fin Contenu */}

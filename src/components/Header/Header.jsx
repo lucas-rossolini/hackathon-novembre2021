@@ -26,8 +26,7 @@ function Header() {
               <Nav className="justify-content-end flex-grow-1 pe-3 text-white">
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">Player</Nav.Link>
-                <Nav.Link href="#action2">Search</Nav.Link>
-                <Nav.Link href="#action2">Favorites</Nav.Link>
+                <Nav.Link href="#action2">Playlist</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

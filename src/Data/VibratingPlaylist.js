@@ -54,22 +54,4 @@ const Playlists = {
   ],
 };
 
-const $buttons = document.querySelector('[data-box="buttons"]');
-const $textSupport = document.querySelector('p[data-js="support"]');
-
-const isSupported = "vibrate" in navigator;
-
-const vibrate = (music) => navigator.vibrate(Playlists[music]);
-
-const supportedMessage = (is) =>
-  is ? "You browser supports" : "You browser does not supports";
-
-$textSupport.innerHTML = supportedMessage(isSupported);
-
-if (isSupported) {
-  $buttons.addEventListener("click", (e) => {
-    const music = e.target.dataset[" js "];
-    vibrate(music);
-  });
-}
 export default Playlists;
