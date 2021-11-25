@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
-import song1 from "../../assets/images/song-1.jpg";
 import titles from "../../Data/data";
 
 import "./Player.css";
