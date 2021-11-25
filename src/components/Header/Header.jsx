@@ -18,12 +18,12 @@ function Header() {
             placement="end"
           >
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel">
+              <Offcanvas.Title className="text-white" id="offcanvasNavbarLabel">
                 WildVibes
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3 .text-white">
+              <Nav className="justify-content-end flex-grow-1 pe-3 text-white">
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">Player</Nav.Link>
                 <Nav.Link href="#action2">Search</Nav.Link>
