@@ -24,7 +24,6 @@ function App() {
           <Route path="favorites" element={<Playlist />} />
         </Routes>
       </BrowserRouter>
-
       {/* Contenu */}
 
       {/* Fin Contenu */}
