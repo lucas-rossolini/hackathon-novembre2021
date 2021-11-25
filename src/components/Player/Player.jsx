@@ -74,7 +74,7 @@ function Player() {
         SkipSong={SkipSong}
       />
       <p>
-        Next up:
+        Next up :
         <span>
           {songs[nextSongIndex].title} by {songs[nextSongIndex].name}
         </span>
