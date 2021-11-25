@@ -1,7 +1,6 @@
 import React from "react";
 
 function Details(props) {
-  console.log(props);
   return (
     <div className="c-player--details">
       <div className="details-img">
