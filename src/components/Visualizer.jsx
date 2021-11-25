@@ -1,7 +1,6 @@
 import React from "react";
 import AudioSpectrum from "react-audio-spectrum";
-import { Button, Container } from "react-bootstrap";
-import Music from "../Data/Music.mp3";
+import { Container } from "react-bootstrap";
 
 export default function Visualizer({ song, ref }) {
   return (

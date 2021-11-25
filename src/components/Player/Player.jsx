@@ -32,8 +32,6 @@ function Player() {
     }
   });
 
-  console.log(songs[currentSongIndex].src);
-
   const SkipSong = (forwards = true) => {
     if (forwards) {
       setCurrentSongIndex(() => {
@@ -59,22 +57,20 @@ function Player() {
       });
     }
   };
-  console.log(currentSongIndex);
 
   //   ref={audioEl}
   return (
     <div className="c-player">
       <audio src={songs[currentSongIndex].src} ref={audioEl}></audio>
       {isPlaying && <Visualizer song={songs[currentSongIndex]} ref={audioEl} />}
-      <h4>Playing now</h4>
-      <Details song={songs[currentSongIndex]} />
+      <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
       <Controls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         SkipSong={SkipSong}
       />
       <p>
-        Next up :
+        Next up :{" "}
         <span>
           {songs[nextSongIndex].title} by {songs[nextSongIndex].name}
         </span>
