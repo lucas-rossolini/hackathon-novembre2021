@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import Wave from "@foobar404/wave";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import titles from "../../Data/data";
@@ -65,15 +66,25 @@ function Player() {
       });
     }
   };
+  const wave = new Wave();
+  const options = {
+    stroke: 1,
+    type: "flower",
+    colors: ["blue", "white", "red"],
+  };
+  wave.fromElement("audio-element_id", "canvas_id", options);
 
   //   ref={audioEl}
   return (
     <div className="c-player">
-      <audio src={songs[currentSongIndex].src} ref={audioEl}></audio>
+      <canvas id="canvas_id" height="400" width="400"></canvas>
+      <audio
+        id="audio-element_id"
+        src={songs[currentSongIndex].src}
+        ref={audioEl}
+      ></audio>
       <h4>Playing now</h4>
       <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
-      <Details song={songs[currentSongIndex]} />
-      {isPlaying && <Visualizer song={songs[currentSongIndex]} ref={audioEl} />}
       <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
 
       <Controls
