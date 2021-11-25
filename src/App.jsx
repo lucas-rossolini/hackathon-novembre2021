@@ -36,7 +36,6 @@ function App() {
       {/* Contenu */}
 
       {/* Fin Contenu */}
-
       {/* Footer */}
 
       {/* Footer */}
