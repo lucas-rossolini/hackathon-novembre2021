@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import NotFound from "./components/NotFound/NotFound.jsx";
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import SearchPage from "./components/SearchPage/SearchPage.jsx";
@@ -30,6 +30,7 @@ function App() {
         <Route exact path="search" element={<SearchPage />} />
         <Route path="player" element={<Player />} />
         <Route path="favorites" element={<Playlist />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {/* Contenu */}
       {/* Fin Contenu */}
