@@ -12,7 +12,7 @@ function Player() {
 
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
+  const [finishVibrate, setFinishVibrate] = useState([]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
   // const [deaf, setDeaf] = useState(false);
@@ -21,6 +21,27 @@ function Player() {
   //   setDeaf(!deaf);
   // };
 
+  let temps = 0;
+  const vibrate = (musique) => {
+    musique.forEach((music, index) => {
+      if (index === 0) {
+        navigator.vibrate(music);
+      }
+      const reducer = (previousValue, currentValue) =>
+        previousValue + currentValue;
+      temps += music.reduce(reducer, 0);
+      const idTimeOut = setTimeout(() => {
+        navigator.vibrate(musique[index + 1]);
+        const tempo = finishVibrate;
+        tempo.unshift();
+        setFinishVibrate(tempo);
+      }, temps);
+      console.log(idTimeOut);
+      const provisoire = finishVibrate;
+      provisoire.push(idTimeOut);
+      setFinishVibrate(provisoire);
+    });
+  };
   useEffect(() => {
     setNextSongIndex(() => {
       if (currentSongIndex + 1 > songs.length - 1) {
