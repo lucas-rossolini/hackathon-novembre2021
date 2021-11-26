@@ -5,9 +5,7 @@ import Details from "./Details.jsx";
 import titles from "../../Data/data";
 import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 import "./Player.css";
-import Visualizer from "../Visualizer.jsx";
 import Lyrics from "../Modal/Modal.jsx";
-
 
 function Player() {
   const [songs] = useState(titles);
@@ -18,12 +16,33 @@ function Player() {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
   const [deaf, setDeaf] = useState(false);
+  const [finishVibrate, setFinishVibrate] = useState([]);
 
   const triggerToggle = () => {
     setDeaf(!deaf);
   };
 
-  console.log(deaf);
+  let temps = 0;
+  const vibrate = (musique) => {
+    musique.forEach((music, index) => {
+      if (index === 0) {
+        navigator.vibrate(music);
+      }
+      const reducer = (previousValue, currentValue) =>
+        previousValue + currentValue;
+      temps += music.reduce(reducer, 0);
+      const idTimeOut = setTimeout(() => {
+        navigator.vibrate(musique[index + 1]);
+        const tempo = finishVibrate;
+        tempo.unshift();
+        setFinishVibrate(tempo);
+      }, temps);
+      console.log(idTimeOut);
+      const provisoire = finishVibrate;
+      provisoire.push(idTimeOut);
+      setFinishVibrate(provisoire);
+    });
+  };
 
   useEffect(() => {
     setNextSongIndex(() => {
@@ -37,10 +56,15 @@ function Player() {
   useEffect(() => {
     if (isPlaying) {
       audioEl.current.play();
+      vibrate(songs[currentSongIndex].vibrate);
     } else {
       audioEl.current.pause();
+      finishVibrate.forEach((vibration) => {
+        clearTimeout(vibration);
+      });
+      setFinishVibrate([]);
     }
-  });
+  }, [isPlaying]);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -102,6 +126,7 @@ function Player() {
         </span>
       </p>
       <Lyrics data={titles} currentSongIndex={currentSongIndex} />
+      {console.log(finishVibrate)}
     </div>
   );
 }
