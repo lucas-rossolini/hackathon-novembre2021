@@ -3,11 +3,9 @@ import Wave from "@foobar404/wave";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import titles from "../../Data/data";
-import ToggleButton from "../ToggleButton/ToggleButton.jsx";
+// import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 import "./Player.css";
-import Visualizer from "../Visualizer.jsx";
 import Lyrics from "../Modal/Modal.jsx";
-
 
 function Player() {
   const [songs] = useState(titles);
@@ -17,13 +15,11 @@ function Player() {
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
-  const [deaf, setDeaf] = useState(false);
+  // const [deaf, setDeaf] = useState(false);
 
-  const triggerToggle = () => {
-    setDeaf(!deaf);
-  };
-
-  console.log(deaf);
+  // const triggerToggle = () => {
+  //   setDeaf(!deaf);
+  // };
 
   useEffect(() => {
     setNextSongIndex(() => {
@@ -75,18 +71,20 @@ function Player() {
   };
   wave.fromElement("audio-element_id", "canvas_id", options);
 
-  //   ref={audioEl}
   return (
     <div className="c-player">
-      <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
-      <div>
-        {isPlaying && <canvas id="canvas_id" height="300" width="300"></canvas>}
-        <audio
-          id="audio-element_id"
-          src={songs[currentSongIndex].src}
-          ref={audioEl}
-        ></audio>
-      </div>
+      {/* <ToggleButton
+        className="mt-2"
+        triggerToggle={triggerToggle}
+        deaf={deaf}
+      /> */}
+      {isPlaying && <canvas id="canvas_id" height="351" width="300"></canvas>}
+      <audio
+        id="audio-element_id"
+        src={songs[currentSongIndex].src}
+        ref={audioEl}
+      ></audio>
+
       <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
       <Controls
         isPlaying={isPlaying}
