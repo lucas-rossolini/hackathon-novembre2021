@@ -4,9 +4,7 @@ import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import titles from "../../Data/data";
 import ToggleButton from "../ToggleButton/ToggleButton.jsx";
-
 import "./Player.css";
-import Visualizer from "../Visualizer/Visualizer.jsx";
 
 function Player() {
   const [songs] = useState(titles);
@@ -68,25 +66,25 @@ function Player() {
   };
   const wave = new Wave();
   const options = {
-    stroke: 1,
+    stroke: 2,
     type: "flower",
-    colors: ["blue", "white", "red"],
+    colors: ["#19CFFC", "#FFE694", "#098DFE", "#9545DD"],
   };
   wave.fromElement("audio-element_id", "canvas_id", options);
 
   //   ref={audioEl}
   return (
     <div className="c-player">
-      <canvas id="canvas_id" height="400" width="400"></canvas>
-      <audio
-        id="audio-element_id"
-        src={songs[currentSongIndex].src}
-        ref={audioEl}
-      ></audio>
-      <h4>Playing now</h4>
       <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
+      <div>
+        <canvas id="canvas_id" height="500" width="400"></canvas>
+        <audio
+          id="audio-element_id"
+          src={songs[currentSongIndex].src}
+          ref={audioEl}
+        ></audio>
+      </div>
       <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
-
       <Controls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
