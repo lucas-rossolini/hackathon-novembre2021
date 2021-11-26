@@ -17,7 +17,9 @@ function Lyrics(props) {
           <Modal.Title>{props.data[props.currentSongIndex].title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>{props.data[props.currentSongIndex].lyrics}</p>
+          <p className="lyrics-text">
+            {props.data[props.currentSongIndex].lyrics}
+          </p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
