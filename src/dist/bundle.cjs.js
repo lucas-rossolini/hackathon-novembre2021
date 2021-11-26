@@ -2703,5 +2703,4 @@ Wave.prototype = {
   visualize,
   Helper,
 };
-
-module.exports = Wave;
+ export default Wave;
