@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from "react";
-import Wave from "@foobar404/wave";
+import Wave from "../../dist/bundle.cjs";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import titles from "../../Data/data";

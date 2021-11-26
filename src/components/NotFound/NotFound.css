@@ -1,0 +1,73 @@
+
+.div404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.flex404 {
+  display: flex;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.title404 {
+  color: white;
+  padding: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 60px;
+}
+.image404 {
+  height: 100px;
+  margin: 0 20px;
+}
+.title2404 {
+  color: white;
+  padding: 2rem auto 0 auto;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+.rotate-scale-up {
+	-webkit-animation: rotate-scale-up 5s linear both;
+	        animation: rotate-scale-up 5s linear both;
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-up
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(1.2) rotateZ(180deg);
+            transform: scale(1.2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(1.2) rotateZ(180deg);
+            transform: scale(1.2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
