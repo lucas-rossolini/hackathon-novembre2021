@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from "react";
 import Wave from "@foobar404/wave";
 import Controls from "./Controls.jsx";
@@ -9,7 +10,6 @@ import Lyrics from "../Modal/Modal.jsx";
 
 function Player() {
   const [songs] = useState(titles);
-
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [finishVibrate, setFinishVibrate] = useState([]);
@@ -36,7 +36,6 @@ function Player() {
         tempo.unshift();
         setFinishVibrate(tempo);
       }, temps);
-      console.log(idTimeOut);
       const provisoire = finishVibrate;
       provisoire.push(idTimeOut);
       setFinishVibrate(provisoire);
@@ -69,11 +68,9 @@ function Player() {
       setCurrentSongIndex(() => {
         let temp = currentSongIndex;
         temp += 1;
-
         if (temp > songs.length - 1) {
           temp = 0;
         }
-
         return temp;
       });
     } else {
@@ -126,7 +123,6 @@ function Player() {
         </span>
       </p>
       <Lyrics data={titles} currentSongIndex={currentSongIndex} />
-      {console.log(finishVibrate)}
     </div>
   );
 }

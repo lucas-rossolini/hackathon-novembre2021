@@ -4,10 +4,8 @@ import "./Modal.css";
 
 function Lyrics(props) {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  console.log(props);
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
