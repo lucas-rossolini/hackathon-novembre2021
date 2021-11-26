@@ -72,7 +72,8 @@ function Player() {
   };
   wave.fromElement("audio-element_id", "canvas_id", options);
 
-  //   ref={audioEl}
+  // const myAudio = document.querySelector("audio");
+  // myAudio.volume = 0.001;
   return (
     <div className="c-player">
       <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
