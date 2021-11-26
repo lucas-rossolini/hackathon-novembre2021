@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import ScrollText from "react-scroll-text";
 import React, { useState, useRef, useEffect } from "react";
 import Wave from "../../dist/bundle.cjs";
 import Controls from "./Controls.jsx";
@@ -6,7 +7,6 @@ import Details from "./Details.jsx";
 import titles from "../../Data/data";
 // import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 import "./Player.css";
-import Lyrics from "../Modal/Modal.jsx";
 
 function Player() {
   const [songs] = useState(titles);
@@ -122,7 +122,17 @@ function Player() {
           {songs[nextSongIndex].title} by {songs[nextSongIndex].name}
         </span>
       </p>
-      <Lyrics data={titles} currentSongIndex={currentSongIndex} />
+      <div className="divscroll">
+        <ScrollText>
+          <p className="scroll">
+            <span className="blanc">
+              {" "}
+              {isPlaying && songs[currentSongIndex].blanc}
+            </span>
+            <span> {isPlaying && songs[currentSongIndex].lyrics} </span>
+          </p>
+        </ScrollText>
+      </div>
     </div>
   );
 }
