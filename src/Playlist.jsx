@@ -2,6 +2,7 @@ import React from "react";
 import "./Playlist.css";
 import titles from "./Data/data";
 import Coeur from "./assets/images/heart.png";
+import Lyrics from "./components/Modal/Modal.jsx";
 
 function Playlist() {
   return (
