@@ -105,7 +105,6 @@ function Player() {
         </span>
       </p>
       <Lyrics data={titles} currentSongIndex={currentSongIndex} />
-      {console.log(finishVibrate)}
     </div>
   );
 }
