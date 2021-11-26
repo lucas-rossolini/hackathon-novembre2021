@@ -33,10 +33,15 @@ function Player() {
   useEffect(() => {
     if (isPlaying) {
       audioEl.current.play();
+      vibrate(songs[currentSongIndex].vibrate);
     } else {
       audioEl.current.pause();
+      finishVibrate.forEach((vibration) => {
+        clearTimeout(vibration);
+      });
+      setFinishVibrate([]);
     }
-  });
+  }, [isPlaying]);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -100,6 +105,7 @@ function Player() {
         </span>
       </p>
       <Lyrics data={titles} currentSongIndex={currentSongIndex} />
+      {console.log(finishVibrate)}
     </div>
   );
 }
