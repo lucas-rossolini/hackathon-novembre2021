@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-// import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { motion } from "framer-motion";
 
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
@@ -34,7 +32,6 @@ function App() {
         <Route path="favorites" element={<Playlist />} />
       </Routes>
       {/* Contenu */}
-
       {/* Fin Contenu */}
       {/* Footer */}
 

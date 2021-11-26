@@ -3,7 +3,7 @@ import Wave from "@foobar404/wave";
 import Controls from "./Controls.jsx";
 import Details from "./Details.jsx";
 import titles from "../../Data/data";
-import ToggleButton from "../ToggleButton/ToggleButton.jsx";
+// import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 import "./Player.css";
 import Lyrics from "../Modal/Modal.jsx";
 
@@ -15,34 +15,11 @@ function Player() {
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
-  const [deaf, setDeaf] = useState(false);
-  const [finishVibrate, setFinishVibrate] = useState([]);
+  // const [deaf, setDeaf] = useState(false);
 
-  const triggerToggle = () => {
-    setDeaf(!deaf);
-  };
-
-  let temps = 0;
-  const vibrate = (musique) => {
-    musique.forEach((music, index) => {
-      if (index === 0) {
-        navigator.vibrate(music);
-      }
-      const reducer = (previousValue, currentValue) =>
-        previousValue + currentValue;
-      temps += music.reduce(reducer, 0);
-      const idTimeOut = setTimeout(() => {
-        navigator.vibrate(musique[index + 1]);
-        const tempo = finishVibrate;
-        tempo.unshift();
-        setFinishVibrate(tempo);
-      }, temps);
-      console.log(idTimeOut);
-      const provisoire = finishVibrate;
-      provisoire.push(idTimeOut);
-      setFinishVibrate(provisoire);
-    });
-  };
+  // const triggerToggle = () => {
+  //   setDeaf(!deaf);
+  // };
 
   useEffect(() => {
     setNextSongIndex(() => {
@@ -99,18 +76,20 @@ function Player() {
   };
   wave.fromElement("audio-element_id", "canvas_id", options);
 
-  //   ref={audioEl}
   return (
     <div className="c-player">
-      <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
-      <div>
-        {isPlaying && <canvas id="canvas_id" height="300" width="300"></canvas>}
-        <audio
-          id="audio-element_id"
-          src={songs[currentSongIndex].src}
-          ref={audioEl}
-        ></audio>
-      </div>
+      {/* <ToggleButton
+        className="mt-2"
+        triggerToggle={triggerToggle}
+        deaf={deaf}
+      /> */}
+      {isPlaying && <canvas id="canvas_id" height="351" width="300"></canvas>}
+      <audio
+        id="audio-element_id"
+        src={songs[currentSongIndex].src}
+        ref={audioEl}
+      ></audio>
+
       <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
       <Controls
         isPlaying={isPlaying}
