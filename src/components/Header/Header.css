@@ -126,7 +126,9 @@ input:checked ~ #nav-header ul li {
 }
 
 .a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #FFE695;
+  transform: scale(1.1);
 }
 
 .nameLogo{
@@ -138,6 +140,11 @@ input:checked ~ #nav-header ul li {
 
 .nameApp{
 margin:8px 2px 0 4px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
 }
 /* --------------------------------------
               CSS Yohan
