@@ -6,6 +6,7 @@ import ToggleButton from "../ToggleButton/ToggleButton.jsx";
 
 import "./Player.css";
 import Visualizer from "../Visualizer.jsx";
+import Lyrics from "../Modal/Modal.jsx";
 
 function Player() {
   const [songs] = useState(titles);
@@ -75,7 +76,6 @@ function Player() {
       <Details song={songs[currentSongIndex]} />
       {isPlaying && <Visualizer song={songs[currentSongIndex]} ref={audioEl} />}
       <Details song={songs[currentSongIndex]} isPlaying={isPlaying} />
-
       <Controls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
@@ -89,6 +89,7 @@ function Player() {
           {songs[nextSongIndex].title} by {songs[nextSongIndex].name}
         </span>
       </p>
+      <Lyrics data={titles} currentSongIndex={currentSongIndex} />
     </div>
   );
 }

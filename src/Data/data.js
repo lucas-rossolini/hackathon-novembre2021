@@ -36,6 +36,8 @@ const titles = [
       [150, 200, 150, 200, 150, 650],
       [150, 200, 150, 200, 150, 650],
     ],
+    lyrics:
+      "Buddy, you're a boy, make a big noise Playing in the street, gonna be a big man someday You got mud on your face, you big disgrace \n Kicking your can all over the place, singin' We will, we will rock you We will, we will rock you \n Buddy, you're a young man, hard man Shouting in the street, gonna take on the world someday You got blood on your face, you big disgrace \n Waving your banner all over the place We will, we will rock you, sing it! We will, we will rock you, yeah \n Buddy, you're an old man, poor man Pleading with your eyes, gonna get you some peace someday You got mud on your face, big disgrace \n Somebody better put you back into your place, do it! \n We will, we will rock you, yeah, yeah, come on We will, we will rock you, alright, louder! We will, we will rock you, one more time We will, we will rock you Yeah",
   },
   {
     name: "Michael Jackson",
