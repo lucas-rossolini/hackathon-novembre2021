@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from "react";
 import Wave from "@foobar404/wave";
 import Controls from "./Controls.jsx";
@@ -9,10 +10,9 @@ import Lyrics from "../Modal/Modal.jsx";
 
 function Player() {
   const [songs] = useState(titles);
-
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
+  const [finishVibrate, setFinishVibrate] = useState([]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
   // const [deaf, setDeaf] = useState(false);
@@ -21,6 +21,26 @@ function Player() {
   //   setDeaf(!deaf);
   // };
 
+  let temps = 0;
+  const vibrate = (musique) => {
+    musique.forEach((music, index) => {
+      if (index === 0) {
+        navigator.vibrate(music);
+      }
+      const reducer = (previousValue, currentValue) =>
+        previousValue + currentValue;
+      temps += music.reduce(reducer, 0);
+      const idTimeOut = setTimeout(() => {
+        navigator.vibrate(musique[index + 1]);
+        const tempo = finishVibrate;
+        tempo.unshift();
+        setFinishVibrate(tempo);
+      }, temps);
+      const provisoire = finishVibrate;
+      provisoire.push(idTimeOut);
+      setFinishVibrate(provisoire);
+    });
+  };
   useEffect(() => {
     setNextSongIndex(() => {
       if (currentSongIndex + 1 > songs.length - 1) {
@@ -48,11 +68,9 @@ function Player() {
       setCurrentSongIndex(() => {
         let temp = currentSongIndex;
         temp += 1;
-
         if (temp > songs.length - 1) {
           temp = 0;
         }
-
         return temp;
       });
     } else {
