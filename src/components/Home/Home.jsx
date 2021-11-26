@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import logo from "../../assets/images/logo-big.png";
 
@@ -14,7 +15,9 @@ function Home() {
           Developped by four wilders :<br /> Guilhem, Lucas, Yohan and Mathieu
           <br />
           are proud to present: <br />
-          <img src={logo} alt="logo" />
+          <Link to="/Player">
+            <img src={logo} alt="logo" />{" "}
+          </Link>
         </p>
       </div>
     </div>
