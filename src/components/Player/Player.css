@@ -81,3 +81,16 @@
   color: #888;
   font-size: 18px;
 }
+
+.scroll {
+  color: #1ACFFC;
+}
+
+.divscroll {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.blanc {
+  opacity: 0;
+}
