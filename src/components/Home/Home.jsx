@@ -11,7 +11,7 @@ function Home() {
       </div>
       <div>
         <p className="descriptiontext">
-          Developped by four wilders :<br /> Guilhem, Lucas, Yohann and Mathieu
+          Developped by four wilders :<br /> Guilhem, Lucas, Yohan and Mathieu
           <br />
           are proud to present: <br />
           <img src={logo} alt="logo" />
