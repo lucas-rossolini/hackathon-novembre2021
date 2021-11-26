@@ -6,6 +6,7 @@ function Lyrics(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -14,7 +15,9 @@ function Lyrics(props) {
 
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
-          <Modal.Title>{props.data[props.currentSongIndex].title}</Modal.Title>
+          <Modal.Title className="lyrics-text">
+            {props.data[props.currentSongIndex].title}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p className="lyrics-text">

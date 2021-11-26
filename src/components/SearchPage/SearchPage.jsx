@@ -22,7 +22,9 @@ function SearchPage() {
       </div>
       <div>
         {titles
-          .filter((title) => title.title.toLowerCase().includes(filtervalue))
+          .filter((title) =>
+            title.title.toLowerCase().includes(filtervalue.toLowerCase())
+          )
           .map((title) => (
             <div className="favori-global">
               <div className="cartes-favori">
