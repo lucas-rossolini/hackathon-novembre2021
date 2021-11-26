@@ -80,7 +80,7 @@ function Player() {
     <div className="c-player">
       <ToggleButton triggerToggle={triggerToggle} deaf={deaf} />
       <div>
-        <canvas id="canvas_id" height="500" width="400"></canvas>
+        {isPlaying && <canvas id="canvas_id" height="300" width="300"></canvas>}
         <audio
           id="audio-element_id"
           src={songs[currentSongIndex].src}
