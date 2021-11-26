@@ -22,7 +22,7 @@ function Controls(props) {
       }, temps);
     });
   };
-  console.log(props.currentSongIndex);
+
   return (
     <div className="c-player--controls">
       <button className="skip-btn" onClick={() => props.SkipSong(false)}>

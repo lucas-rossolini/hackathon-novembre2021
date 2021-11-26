@@ -129,6 +129,16 @@ input:checked ~ #nav-header ul li {
   text-decoration: underline;
 }
 
+.nameLogo{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+}
+
+.nameApp{
+margin:8px 2px 0 4px;
+}
 /* --------------------------------------
               CSS Yohan
 -------------------------------------- */

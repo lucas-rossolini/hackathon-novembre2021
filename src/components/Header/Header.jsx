@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "../../assets/images/logo.png";
 import "./Header.css";
-// TODO Mettre logo + lien vers pages
+
 function Header() {
   const [isChecked, setIsChecked] = React.useState("");
   function handleIsChecked() {
@@ -14,6 +14,10 @@ function Header() {
   }
   return (
     <div>
+      <div className="nameLogo ">
+        <h1 className="nameApp">WildVibes</h1>
+        <img src={Logo} alt="Logo" />
+      </div>
       <div>
         <input
           id="burger"
